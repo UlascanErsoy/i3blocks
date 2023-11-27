@@ -1,0 +1,61 @@
+SCRIPT_DIR=/home/cake/.config/i3blocks/i3blocks-contrib/
+
+[countdown2]
+command=$SCRIPT_DIR/countdown.sh
+label=ECEN646 FINAL 
+instance=12/08/2023 13:00:00
+interval=1
+color=#00FFFF
+
+[countdown]
+command=$SCRIPT_DIR/countdown.sh
+label=ECEN427 FINAL 
+instance=11/30/2023 14:15:00
+interval=1
+color=#FFFF00
+
+
+[spotify]
+command=$SCRIPT_DIR/spotifyd_dbus/spotifyd_dbus
+color=#00FFB3
+interval=2
+MAX_WIDTH=20
+SCROLL_SPEED=3
+
+[volume]
+command=/home/cake/CuteScripts/i3blocks-audio-volume.sh
+LABEL= 
+interval=once
+signal=10
+USE_ALSA_NAME=1
+
+[ssid]
+command=iwgetid -r
+color=#00ff00
+interval=60
+
+[disk]
+command=$SCRIPT_DIR/disk/disk
+label= 
+interval=30
+
+[memory]
+command=$SCRIPT_DIR/memory/memory
+instance=mem;free
+interval=30
+
+[battery]
+command=$SCRIPT_DIR/battery/battery.py
+BAT_NUMBER=1
+interval=30
+
+# Update time every 5 seconds
+[calendar]
+command=$SCRIPT_DIR/calendar/calendar
+interval=30
+LABEL= 
+DATEFMT=+%H:%M
+# SHORTFMT=+%H:%M:%S
+HEIGHT=180
+WIDTH=220
+
